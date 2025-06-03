@@ -155,9 +155,23 @@ FROM
  
 -- 16. Examine the Products table. How do you know what supplier supplies each product? Write a query to list all of the items that "Tokyo Traders" supplies to Northwind
 -- ANSWER-> SupplierID
+select 
+suppliers.SupplierID,
+suppliers.CompanyName
+from
+suppliers
+where
+suppliers.CompanyName = "Tokyo Traders";  -- Tokyo Traders supplierID is 4
 
+Select 
+ProductName,
+SupplierID
 
+From
+products
 
+where
+SupplierID = 4;
 
 
 
